@@ -1,11 +1,12 @@
 # Algorithm
+import numpy as np
+
 def medianBlur(img, kernel, padding_way):
     '''
     @param img single channel image np.array type list
     @param kernel np.array type list
     @param padding_way string
     '''
-    im_shape = img.shape
     k_shape = max(kernel.shape) # expand kernel
     expand_lines = int(k_shape/2)
     if padding_way == 'REPLICA':
