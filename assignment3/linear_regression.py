@@ -81,7 +81,7 @@ def run():
 
     data = gen_test_data_set()
 
-    theta0, theta1, lost_history = train(data, 0.001, 10000)
+    theta0, theta1, lost_history = train(data, 0.001, 10000, thres = 0.0011)
 
     #print(lost_history)
 
