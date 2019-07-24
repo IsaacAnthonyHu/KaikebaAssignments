@@ -80,6 +80,5 @@ $$
 
 下附$\frac{\partial F}{\partial a_i}$求解过程：
 
+![98849cde533238f22ba99ac6f7d7cfd](E:\98849cde533238f22ba99ac6f7d7cfd.jpg)
 
-
-![98849cde533238f22ba99ac6f7d7cfd](C:\Users\jetech67\AppData\Local\Temp\WeChat Files\98849cde533238f22ba99ac6f7d7cfd.jpg)
