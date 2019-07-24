@@ -64,3 +64,36 @@ try 不出来，直接写代码吧
 遇到了一个问题，逻辑回归的lost好像降不到很低的样子，前一个线性回归能降到0.001，逻辑回归就只能降到0.46，我想应该是数据点的问题吧
 
 ## Mathematics
+
+A person is swimming across several rivers.
+
+Speeds of those rivers are different: [v1, v2, v3, v4,...,vn], consider vertical speed only.
+
+Width of rivers is known as [S1, S2, S3, S4,...,Sn]
+
+The person's speed is v, the swimming angle of velocity to horizontal line is [a1, a2, a3, a4,...,an]
+
+The person must pass all those rivers, the total time for swimming is T
+
+##### Task:
+
+Find out an equation to determine by choosing what angles the person can get maximum distance in vertical direction (maximize dh by determining [a1, a2, a3,...,an])
+
+
+
+$$
+\begin{gather}
+\displaystyle\sum\limits_{i=1}^n \frac {v * cos(a_i)} {S_i} = T \tag{1}\\\\
+h = \displaystyle\sum\limits_{i=1}^n \frac {(v_i + v*sin(a_i))* S_i} {v * cos(a_i)} \tag{2}
+\end{gather}
+$$
+
+$$
+\begin{gather}
+
+\end{gather}
+$$
+
+已知1式求$h_{max}$
+
+
