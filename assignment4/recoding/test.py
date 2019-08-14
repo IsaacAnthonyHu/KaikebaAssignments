@@ -6,9 +6,12 @@ import sklearn.linear_model
 np.random.seed(0) # set same random seed (ensure same random samples)
 X, y = sklearn.datasets.make_moons(200, noise=0.2)
 
+
 num_examples = len(X)  # train size
 nn_input_dim = 2  # input dimension
 nn_output_dim = 1 # output dimension
+
+y = y.reshape((200,nn_output_dim))
 
 lr = 0.01  # learning rate
 reg_lambda = 0.01  # ?
@@ -35,9 +38,15 @@ def build_model(nn_hdim, num_passes=30000, print_loss=False):
 
     for i in range(num_passes):
 
-        z1 = X.dot(weight_1) + bias_1
-        a1 = sigmoid(z1)
+        z1 = X.dot(weight_1) + bias_1  # Hidden Layer Input
+        a1 = sigmoid(z1)  # Hidden Layer Output
         z2 = a1.dot(weight_2) + bias_2
         a2 = sigmoid(z2)
-
+        
+        dW2 = (y-a2) * y * (1-y) * (np.sum(a1, axis=0) / len(y))
+        
+        weight_1 -= lr * dW1
+        bias_1 -= lr * db1
+        weight_2 -= lr * dW2
+        bias_2 -= lr * db2
 
